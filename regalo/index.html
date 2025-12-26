@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amor ❤️ - Regalo de Navidad</title>
+    <style>
+        :root {
+            --rojo-navidad: #b3000c;
+            --verde-navidad: #165b33;
+            --dorado: #d4af37;
+            --blanco-nieve: #f8f9fa;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            /* Fondo con imagen profesional y degradado */
+            background: linear-gradient(rgba(10, 46, 26, 0.8), rgba(22, 91, 51, 0.8)), 
+                        url('https://images.unsplash.com/photo-1483347756197-71ef80e95f73?auto=format&fit=crop&q=80&w=1920');
+            background-attachment: fixed;
+            background-size: cover;
+            color: white;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        #snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&q=80&w=1000') center/cover;
+            border-bottom: 5px solid var(--dorado);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--dorado);
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
+            animation: fadeInDown 2s ease;
+        }
+
+        /* Animación suave para la Foto */
+        .photo-section img {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            border: 8px solid var(--dorado);
+            object-fit: cover;
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.4);
+            margin-bottom: 20px;
+            animation: floatPhoto 4s ease-in-out infinite;
+        }
+
+        @keyframes floatPhoto {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .garden {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--dorado);
+            border-radius: 20px;
+            margin: 20px;
+            padding: 50px;
+            max-width: 80%;
+        }
+
+        .bouquet {
+            font-size: 80px;
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Diseño de la Carta Elegante */
+        .letter {
+            max-width: 600px;
+            background: #fffcf2;
+            color: #333;
+            padding: 50px;
+            border-radius: 2px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            border-left: 10px solid var(--rojo-navidad);
+            transform: rotate(-1deg);
+            position: relative;
+        }
+
+        .music-player-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1001;
+            background: rgba(179, 0, 12, 0.9);
+            padding: 10px;
+            border-radius: 50px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.6);
+            border: 2px solid var(--dorado);
+        }
+
+        /* Animaciones solo de movimiento, sin cambiar tamaño */
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        @keyframes fly {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(20px, -20px); }
+            100% { transform: translate(0, 0); }
+        }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-50px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <div id="snow-container"></div>
+
+    <div class="music-player-container">
+        <audio controls autoplay loop>
+            <source src="flores.mp3" type="audio/mpeg">
+            Tu navegador no soporta el audio.
+        </audio>
+    </div>
+
+    <section class="hero">
+        <h1>¡Hola, Mi Amor! 🎄</h1>
+        <p style="font-size: 1.5rem;">Bienvenida a tu regalo especial.</p>
+        <div style="margin-top: 50px; font-size: 2rem; animation: float 2s infinite;">👇</div>
+    </section>
+
+    <section class="photo-section">
+        <h2 style="color: var(--dorado); font-size: 2.5rem;">Nuestra Historia...</h2>
+        <img src="https://lh3.googleusercontent.com/d/1bMhv3UYt2ApEH-MTP58ZSmxvUo2mWezX" alt="Nosotros">
+        <p style="font-size: 1.2rem; font-style: italic;">"Cada momento a tu lado es mi mejor regalo."</p>
+    </section>
+
+    <section>
+        <div class="garden">
+            <div class="bouquet">
+                💐
+                <div class="butterfly" style="position:absolute; font-size: 30px; top: -20px; left: -40px; animation: fly 4s infinite;">🦋</div>
+                <div class="butterfly" style="position:absolute; font-size: 30px; top: -10px; right: -40px; animation: fly 5s infinite; animation-delay: 1s;">🦋</div>
+                <div class="heart" style="position:absolute; font-size: 25px; top: -50px; left: 20px; animation: float 3s infinite;">❤️</div>
+                <div class="heart" style="position:absolute; font-size: 25px; bottom: -30px; right: 10px; animation: float 3.5s infinite; animation-delay: 0.5s;">💖</div>
+            </div>
+            <h2 style="margin-top: 40px; color: var(--dorado);">Flores que nunca se marchitan</h2>
+            <p>Como lo que siento por ti cada día.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="letter">
+            <h2 style="color: var(--rojo-navidad); font-family: 'Brush Script MT', cursive; font-size: 2.5rem;">Mi Carta para Ti</h2>
+            <p style="line-height: 1.8; text-align: justify;">
+                "Querida belen o mejor dicho mi princesa❤️💐,<br><br>
+                
+
+No quería que este regalo fuera solo algo material. Quería que llevaras contigo un pedazo de lo que siento cada vez que te miro; algo que las palabras a veces no alcanzan a explicar, pero que mi corazón te grita en cada latido, todos los días.
+A veces me detengo a pensar en todo lo que hemos vivido desde que nos conocimos en octubre. En este poco tiempo, te has convertido en mi lugar seguro. Me sorprende y me encanta la conexión que tenemos; es esa magia de entendernos sin decir mucho, de sentir que somos el uno para el otro. En un mundo que a veces se siente caótico y ruidoso, tú eres mi paz, mi silencio favorito y esa luz que me motiva cada día.
+No te amo solo por la mujer maravillosa que eres, sino por la fuerza que me das para ser la mejor versión de mí mismo. Eres la mezcla perfecta de todo lo que alguna vez soñé: tienes esa ternura que me desarma y esa fortaleza que me sostiene cuando siento que el mundo pesa demasiado. Gracias por cada risa compartida, por no soltarme en los momentos difíciles y por hacer que lo cotidiano a tu lado se sienta extraordinario.
+Esta Navidad ha sido muy especial porque, aunque la distancia nos tuvo en ciudades diferentes, te sentí conmigo en cada momento. Es nuestra primera Navidad como novios y, a pesar de los kilómetros entre Valparaíso y Los Andes, mi corazón no se movió de tu lado. Mi único deseo es que sigamos cuidando y construyendo esta historia que apenas comienza, pero que ya significa tanto para mí.
+Eres mi presente más valioso y el futuro que más espero con ansias. Te amo hoy, y en todos los días que nos faltan por descubrir juntos.
+            </p>
+            <p style="text-align: right; font-weight: bold; margin-top: 30px;">— Att Mauricio❤️</p>
+        </div>
+    </section>
+
+    <script>
+        function createSnowflake() {
+            const snowContainer = document.getElementById('snow-container');
+            const snowflake = document.createElement('div');
+            const size = Math.random() * 5 + 2 + 'px';
+            snowflake.style.position = 'absolute';
+            snowflake.style.backgroundColor = 'white';
+            snowflake.style.borderRadius = '50%';
+            snowflake.style.width = size;
+            snowflake.style.height = size;
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.top = '-10px';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.transition = `top ${Math.random() * 3 + 4}s linear`;
+            snowContainer.appendChild(snowflake);
+            setTimeout(() => { snowflake.style.top = '100vh'; }, 10);
+            setTimeout(() => { snowflake.remove(); }, 7000);
+        }
+        setInterval(createSnowflake, 150);
+    </script>
+</body>
+</html>
